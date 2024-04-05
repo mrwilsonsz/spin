@@ -1,0 +1,59 @@
+@import 'mixins'
+@import 'variables'
+
+.pictures, .background
+  background: $pictures-background
+  overflow: hidden
+
+.background
+  width: 100vw
+  max-width: 1126px
+  height: auto
+
+.column1, .column2, .column3
+  @include Columns()
+  border-radius: 4px
+
+@media (max-width: $layout-breakpoint-small)
+  .pictures
+    display: none
+
+  .image
+    width: 100%
+    max-width: 432px
+    object-fit: cover
+
+@media (min-width: $layout-breakpoint-medium) and (max-width: $layout-breakpoint-large)
+  .pictures
+    padding: 24px
+
+  .column1, .column2, .column3
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    gap: 28px
+    padding-top: 20px
+
+  .image
+    display: none
+
+@media (min-width: $layout-breakpoint-large) and (max-width: $layout-breakpoint-larger), (min-width: $layout-breakpoint-larger)
+  .pictures
+    display: flex
+    justify-content: center
+    align-items: center
+    gap: 28px
+    padding-left: 48px
+    padding-right: 24px
+
+  .column1, .column2, .column3
+    padding: 4px
+    gap: 28px
+
+    &:nth-last-child(-n+1)
+      padding-top: 24px
+      height: 23rem
+
+  .image
+    display: none

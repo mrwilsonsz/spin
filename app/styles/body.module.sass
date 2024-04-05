@@ -1,0 +1,25 @@
+@import 'mixins'
+@import 'variables'
+
+.body 
+  color: $background-primary
+  display: flex
+  height: 100vh
+  width: 100vw
+  max-width: 100% 
+
+  @media (max-width: $layout-breakpoint-small) 
+    flex-direction: column
+
+  @media (min-width: $layout-breakpoint-small) and (max-width: $layout-breakpoint-medium) 
+    flex-direction: column
+
+  @media (min-width: $layout-breakpoint-medium) and (max-width: $layout-breakpoint-large) 
+    flex-direction: row
+    gap: 20px
+  
+  @media (min-width: $layout-breakpoint-large) and (max-width: $layout-breakpoint-larger) 
+    overflow-y: hidden
+  
+  @media (min-width: $layout-breakpoint-larger) 
+    margin: auto

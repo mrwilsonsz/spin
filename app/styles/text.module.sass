@@ -1,0 +1,83 @@
+@import 'mixins'
+@import 'variables'
+
+.mainTitle, .text
+  display: flex
+  flex-direction: column
+  gap: 32px
+  padding: 24px
+
+.text
+  @include CommonProperties
+  font-size: 18px
+
+.loginTitle 
+  display: flex
+  gap: 16px
+  align-items: center
+  font-weight: 600
+  font-size: 24px
+  padding: 16px
+  line-height: 32px
+
+@media (min-width: $layout-breakpoint-large) and (max-width: $layout-breakpoint-larger)
+  .mainTitle
+    gap: 40px
+    width: 416px
+
+  .loginTitle 
+    font-size: 32px
+    padding: 24px
+
+  .text
+    font-size: 20px
+
+@media (min-width: $layout-breakpoint-larger)
+  .mainTitle
+    gap: 36px
+    width: 416px
+
+  .text
+    font-size: 20px
+
+.title, .subtitle
+  display: flex
+  justify-content: flex-start
+  align-items: center
+  gap: 16px
+  width: 100%
+  color: $text-primary
+  font-weight: 600
+
+.title
+  font-size: 32px
+  line-height: 32px
+
+.subtitle
+  font-size: 24px
+  line-height: 24px
+
+.textRemember, .textOptions
+  color: $text-primary
+  font-weight: 400
+
+.textRemember
+  font-size: 16px
+  line-height: 16px
+
+.textOptions
+  font-size: 14px
+  line-height: 14px
+
+.textForgot
+  text-decoration: underline
+  color: $text-primary
+  cursor: pointer
+
+.checkbox, .signUpText
+  @include Label()
+  font-weight: 400
+
+.signUpText
+  font-weight: 600
+  text-align: center

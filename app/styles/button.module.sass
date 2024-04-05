@@ -1,0 +1,61 @@
+@import 'variables'
+
+.buttons, .buttonsSocialMedias, .buttonSm
+  width: 100vw
+  max-width: 100%
+  display: flex
+  justify-content: space-between
+  gap: 24px
+
+.buttons, .buttonsSocialMedias
+  padding: 24px
+
+.buttonSm
+  width: 128px
+  height: 38px
+  border-radius: 4px
+  border: 1px solid $text-primary
+  padding: 12px 16px 12px 16px
+  background: $text-secondary
+  cursor: pointer
+
+.loginButton
+  width: 178px
+  height: 48px
+  border-radius: 8px
+  cursor: pointer
+  border: 1px solid $text-primary
+  background: $text-primary
+
+.signUpButton
+  width: 178px
+  height: 48px
+  border: 1px solid $text-primary
+  border-radius: 8px
+  cursor: pointer
+  background: $text-secondary
+
+@media (max-width: $layout-breakpoint-small) 
+  .buttons 
+    padding: 0px 24px
+
+@media (min-width: $layout-breakpoint-small) and (max-width: $layout-breakpoint-medium) 
+  .buttonSm
+    font-weight: 500
+    font-size: 14px
+    line-height: 14px
+
+@media (min-width: $layout-breakpoint-medium) and (max-width: $layout-breakpoint-large) 
+  .buttonSm
+    color: $text-primary
+
+@media (min-width: $layout-breakpoint-large) and (max-width: $layout-breakpoint-larger) 
+  .buttons
+    border: 1px solid $text-primary
+
+@media (min-width: $layout-breakpoint-larger)
+  .buttonsSocialMedias
+    padding: 0px
+
+  .buttonSm
+    border: 1px solid $color

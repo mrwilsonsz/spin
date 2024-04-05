@@ -1,0 +1,30 @@
+@import 'mixins'
+@import 'variables'
+
+.section 
+  width: 100%
+  max-width: 432px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  padding: 0px 0px
+
+  @media (max-width: $layout-breakpoint-small) 
+    width: 100vw
+    max-width: 100%
+    padding: 0px 24px !important
+
+  @media (min-width: $layout-breakpoint-small) and (max-width: $layout-breakpoint-medium) 
+    width: 100vw
+    max-width: 100%
+    padding: 0px 24px !important
+
+  @media (min-width: $layout-breakpoint-medium) and (max-width: $layout-breakpoint-large) 
+    width: 100vw
+    max-width: 100%
+    padding: 0px 24px !important
+
+.remember
+  display: flex
+  gap: 8px
+  align-items: center
